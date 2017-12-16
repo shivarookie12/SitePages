@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Study materials</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body onload="myFunction()" >
+<div class="aa">
+<h><center>Karpagam College Of Engineering</center><h>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+</div>
+	<div id="dept" style="overflow:hidden;" >	
+	<div id="ty" id="abc" >
+	<p id="demo" style="text-align: center;"></p>
+		</div>
+	</div>
+
+
+
+<div id="id01" class="modal">
+  
+<div class="modal-content animate" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
+        
+      <button onclick="can()" type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </div>
+</div>
+
+
+
+
+	<script>
+var i,c=1,j,n,y=28,x=12,z=2016,mylist,list;
+var text = "";
+function myFunction() {
+    setInterval(function(){ my() },30000);
+}
+function can()
+{
+	var pa=document.getElementById("uname").innerHTML;
+	var ps=document.getElementById("psw").innerHTML;
+	if((pa="admin")&&(ps="admin"))
+	{ 
+	var mylist=prompt("Please enter the date");
+list=parseInt(mylist);
+
+    }
+    else
+    {
+    	alert("Password is Wrong");
+    }
+}
+function my() {
+   	d=new Date("12/"+x+"/2016");
+   	n=d.getDate();
+    i=d.getDay();
+        	if(i%7==0)
+            	{          	
+                text+="sunday<br>";          	 
+        	    }
+      	    else  if(n>=list && n<=21)
+            	{
+                text+="holiday<br>" ;         	 
+        	    }
+        	else
+            	{
+             	text+="D"+c+"<br>";
+            	c++;
+            	if(c>6)
+                	{
+                	c=1;
+            	    }
+            	 
+        	    }   	        
+                x++;
+document.getElementById("demo").innerHTML = text;
+text="";
+}
+
+</script>
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website_seekcbe&amp;utm_content=footer_img"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"  alt="www.000webhost.com"></a></div></body>
+
+</html>
